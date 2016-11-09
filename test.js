@@ -15,7 +15,7 @@
  */
 
 var test = require('tape');
-var linkRel = require('./index.js');
+var linkRel = require('./');
 
 /*
  * Tests.

@@ -11,20 +11,17 @@
     "attribute",
     "w3c"
   ],
-  "dependencies": {},
-  "files": [
-    "index.js",
-    "index.json"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wooorm/link-rel.git"
-  },
+  "repository": "https://github.com/wooorm/link-rel",
   "bugs": "https://github.com/wooorm/link-rel/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
   ],
+  "main": "index.json",
+  "files": [
+    "index.json"
+  ],
+  "dependencies": {},
   "devDependencies": {
     "bail": "^1.0.0",
     "browserify": "^13.0.0",
@@ -44,7 +41,7 @@
   "scripts": {
     "build-md": "remark . --quiet --frail",
     "build-crawl": "node script/build.js",
-    "build-bundle": "browserify index.js --bare -s linkRel > link-rel.js",
+    "build-bundle": "browserify index.json --bare -s linkRel > link-rel.js",
     "build-mangle": "esmangle link-rel.js > link-rel.min.js",
     "build": "npm run build-md && npm run build-bundle && npm run build-mangle",
     "lint-api": "eslint .",
