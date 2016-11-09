@@ -40,7 +40,7 @@
   },
   "scripts": {
     "build-md": "remark . --quiet --frail",
-    "build-crawl": "node script/build.js",
+    "build-crawl": "node build",
     "build-bundle": "browserify index.json --bare -s linkRel > link-rel.js",
     "build-mangle": "esmangle link-rel.js > link-rel.min.js",
     "build": "npm run build-md && npm run build-bundle && npm run build-mangle",
