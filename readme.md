@@ -23,12 +23,10 @@ Dependencies:
 
 ```javascript
 var linkRel = require('link-rel');
-```
 
-Slicing the first few items:
+console.log(linkRel.length); //=> 103
 
-```javascript
-var head = linkRel.slice(0, 10);
+console.log(linkRel.slice(0, 10));
 ```
 
 Yields:
@@ -44,18 +42,6 @@ Yields:
   'attachment',
   'authorization_endpoint',
   'canonical' ]
-```
-
-And, computing `length`:
-
-```javascript
-var length = linkRel.length;
-```
-
-Yields:
-
-```js
-103
 ```
 
 ## API
