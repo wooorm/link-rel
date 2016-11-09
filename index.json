@@ -48,6 +48,8 @@
   "edituri",
   "enclosure",
   "glossary",
+  "gtfs-realtime",
+  "gtfs-static",
   "help",
   "home",
   "http://docs.oasis-open.org/ns/cmis/link/200908/acl",
