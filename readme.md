@@ -1,4 +1,4 @@
-# link-rel [![Build Status][build-badge]][build-page] [![Coverage Status][coverage-badge]][coverage-page]
+# link-rel [![Build Status][build-badge]][build-page]
 
 List of values viable for use in `rel` attributes on `link`
 elements, as defined by [HTML5][spec] and [MicroFormats][extensions].
@@ -60,10 +60,6 @@ on `link` elements.
 [build-badge]: https://img.shields.io/travis/wooorm/link-rel.svg
 
 [build-page]: https://travis-ci.org/wooorm/link-rel
-
-[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/link-rel.svg
-
-[coverage-page]: https://codecov.io/github/wooorm/link-rel?branch=master
 
 [npm]: https://docs.npmjs.com/cli/install
 
