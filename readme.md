@@ -14,12 +14,7 @@ types.
 npm install link-rel
 ```
 
-**link-rel** is also available as an AMD, CommonJS, and globals
-module, [uncompressed and compressed][releases].
-
 ## Usage
-
-Dependencies:
 
 ```javascript
 var linkRel = require('link-rel');
@@ -62,8 +57,6 @@ on `link` elements.
 [build-page]: https://travis-ci.org/wooorm/link-rel
 
 [npm]: https://docs.npmjs.com/cli/install
-
-[releases]: https://github.com/wooorm/link-rel/releases
 
 [license]: LICENSE
 
