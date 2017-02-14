@@ -24,7 +24,7 @@
   "dependencies": {},
   "devDependencies": {
     "bail": "^1.0.0",
-    "browserify": "^13.0.0",
+    "browserify": "^14.1.0",
     "concat-stream": "^1.5.2",
     "esmangle": "^1.0.1",
     "remark-cli": "^2.1.0",
