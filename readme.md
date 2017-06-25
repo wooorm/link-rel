@@ -3,8 +3,7 @@
 List of values viable for use in `rel` attributes on `link`
 elements, as defined by [HTML5][spec] and [MicroFormats][extensions].
 
-See [`wooorm/html-link-types`][html-link-types] for just the specced
-types.
+See [`html-link-types`][html-link-types] for just the specced types.
 
 ## Installation
 
