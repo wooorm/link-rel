@@ -18,7 +18,7 @@ npm install link-rel
 ```javascript
 var linkRel = require('link-rel')
 
-console.log(linkRel.length) //=> 117
+console.log(linkRel.length) //=> 112
 
 console.log(linkRel.slice(0, 10))
 ```
@@ -26,16 +26,16 @@ console.log(linkRel.slice(0, 10))
 Yields:
 
 ```js
-[ 'alternate',
-  'amphtml',
-  'appendix',
-  'apple-touch-icon',
-  'apple-touch-icon-precomposed',
-  'apple-touch-startup-image',
-  'archived',
-  'attachment',
-  'authorization_endpoint',
-  'canonical' ]
+[ 'DCTERMS.conformsTo',
+  'DCTERMS.contributor',
+  'DCTERMS.creator',
+  'DCTERMS.description',
+  'DCTERMS.hasFormat',
+  'DCTERMS.hasPart',
+  'DCTERMS.hasVersion',
+  'DCTERMS.isFormatOf',
+  'DCTERMS.isPartOf',
+  'DCTERMS.isReferencedBy' ]
 ```
 
 ## API
