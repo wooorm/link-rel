@@ -2,7 +2,7 @@
 
 var assert = require('assert');
 var test = require('tape');
-var linkRel = require('./');
+var linkRel = require('.');
 
 test('linkRel', function (t) {
   t.ok(
