@@ -27,9 +27,13 @@
     "browserify": "^16.0.0",
     "concat-stream": "^1.5.2",
     "esmangle": "^1.0.1",
+    "hast-util-select": "^1.0.1",
+    "hast-util-to-string": "^1.0.1",
+    "rehype-parse": "^4.1.0",
     "remark-cli": "^5.0.0",
     "remark-preset-wooorm": "^4.0.0",
     "tape": "^4.4.0",
+    "unified": "^6.1.6",
     "xo": "^0.20.0"
   },
   "scripts": {
