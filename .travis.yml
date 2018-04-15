@@ -1,9 +1,10 @@
 language: node_js
 node_js:
-- '4.0'
-- '8.0'
+- lts/boron
+- node
 deploy:
   provider: releases
+  skip_cleanup: true
   api_key:
     secure: irEYfikNbU9av+peNluVS0g7Rf2rJUKI+thW8dbN5Z0KGjiifEr7sMjkAKKaCbGMDM12p2CnpZYjFlGK4pbHBBvnrTvVmaEugysTe0MMwYo8tKpaqWt1KRC+mOD6qOjBCu8fVCFr3pL2wPmurwBvGRmw0/ruSLooLy7eKXG5VrGlFr0qQG7iIbjiAW5kpND1aZFG4fJeyArKE1CmuH0OsP0s18lRPVV89r9RVIXkHGh7YQR6JUfaBR0Z/4729LWllkdEIP5kSYYq+FvTsX+eFSG9uFcOiqf3BBRtBlyqNN+0nwNU/Kq+jOYSuTTRHivhIzBatLlEA7UyRXGgRosVOei17OySZtbNFXN+eZ8VHr57xxUH4ZJBTaFrgTFwx1M4nB3afBFAaFVHRFwAeXmi7IJO0UouhYsws2YEZUz7dlAzhktUNnQx3m5xUP2EA7BuFVu9QxiwkU5wmilH+k1Lp7hNmvHuh/z0w4A0zMuX/mk3yjr/PtOfcBYZ1LH/l/x41APzt5ZXK0IoX7tXznRbGOy8W6G1do/2ztoVodFkCQ2juq63zdTTn7dh3wGN4UbriyJJlT5L7vttzenjs3SrTpyAYBlm9drZp+03+rmmsDJMsycPkQVXuyqf0xWdEGNVYyUZ2e2J2SGAG67p/836YJq/Bzce/pUbymEl9j4iHPg=
   file:
@@ -11,4 +12,3 @@ deploy:
     - "link-rel.min.js"
   on:
     tags: true
-    node: '8.0'
