@@ -33,17 +33,24 @@
     "xo": "^0.20.0"
   },
   "scripts": {
-    "build-md": "remark . -qfo",
-    "build-crawl": "node build",
+    "generate": "node build",
+    "format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
     "build-bundle": "browserify index.json --bare -s linkRel > link-rel.js",
     "build-mangle": "esmangle link-rel.js > link-rel.min.js",
-    "build": "npm run build-md && npm run build-bundle && npm run build-mangle",
-    "lint": "xo",
+    "build": "npm run build-bundle && npm run build-mangle",
     "test-api": "node test.js",
-    "test": "npm run build && npm run lint && npm run test-api"
+    "test": "npm run generate && npm run format && npm run build && npm run test-api"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "semi": false,
+    "trailingComma": "none"
   },
   "xo": {
-    "space": true,
+    "prettier": true,
     "esnext": false,
     "rules": {
       "no-var": "off",

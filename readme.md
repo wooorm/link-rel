@@ -16,11 +16,11 @@ npm install link-rel
 ## Usage
 
 ```javascript
-var linkRel = require('link-rel');
+var linkRel = require('link-rel')
 
-console.log(linkRel.length); //=> 117
+console.log(linkRel.length) //=> 117
 
-console.log(linkRel.slice(0, 10));
+console.log(linkRel.slice(0, 10))
 ```
 
 Yields:
