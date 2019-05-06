@@ -1,4 +1,8 @@
-# link-rel [![Build Status][build-badge]][build-page]
+# link-rel
+
+[![Build][build-badge]][build]
+[![Downloads][downloads-badge]][downloads]
+[![Size][size-badge]][size]
 
 List of values viable for use in `rel` attributes on `link`
 elements, as defined by [HTML5][spec] and [MicroFormats][extensions].
@@ -53,7 +57,15 @@ on `link` elements.
 
 [build-badge]: https://img.shields.io/travis/wooorm/link-rel.svg
 
-[build-page]: https://travis-ci.org/wooorm/link-rel
+[build]: https://travis-ci.org/wooorm/link-rel
+
+[downloads-badge]: https://img.shields.io/npm/dm/link-rel.svg
+
+[downloads]: https://www.npmjs.com/package/link-rel
+
+[size-badge]: https://img.shields.io/bundlephobia/minzip/link-rel.svg
+
+[size]: https://bundlephobia.com/result?p=link-rel
 
 [npm]: https://docs.npmjs.com/cli/install
 
