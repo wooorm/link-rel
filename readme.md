@@ -57,7 +57,7 @@ on `link` elements.
 
 [npm]: https://docs.npmjs.com/cli/install
 
-[license]: LICENSE
+[license]: license
 
 [author]: https://wooorm.com
 
