@@ -9,7 +9,7 @@ test('linkRel', function(t) {
 
   t.doesNotThrow(function() {
     linkRel.forEach(function(tagName) {
-      assert.equal(typeof tagName, 'string', tagName)
+      assert.strictEqual(typeof tagName, 'string', tagName)
     })
   }, 'should be a `string`s')
 
