@@ -39,7 +39,7 @@
   },
   "scripts": {
     "generate": "node build",
-    "format": "remark . -qfo && prettier --write '**/*.js' && xo --fix",
+    "format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
     "build-bundle": "browserify index.json --bare -s linkRel > link-rel.js",
     "build-mangle": "esmangle link-rel.js > link-rel.min.js",
     "build": "npm run build-bundle && npm run build-mangle",
