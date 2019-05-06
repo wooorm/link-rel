@@ -59,7 +59,7 @@ on `link` elements.
 
 [license]: LICENSE
 
-[author]: http://wooorm.com
+[author]: https://wooorm.com
 
 [spec]: https://html.spec.whatwg.org/#linkTypes
 
