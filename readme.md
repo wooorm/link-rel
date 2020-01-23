@@ -4,22 +4,22 @@
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
-List of values viable for use in `rel` attributes on `link`
-elements, as defined by [HTML5][spec] and [MicroFormats][extensions].
+List of values viable for use in `rel` attributes on `link` elements, as defined
+by [HTML][spec] and [MicroFormats][extensions].
 
 See [`html-link-types`][html-link-types] for just the specced types.
 
-## Installation
+## Install
 
 [npm][]:
 
-```bash
+```sh
 npm install link-rel
 ```
 
-## Usage
+## Use
 
-```javascript
+```js
 var linkRel = require('link-rel')
 
 console.log(linkRel.length) //=> 112
@@ -46,8 +46,8 @@ Yields:
 
 ### `linkRel`
 
-`Array.<string>` — List of lower-case possible link types for `rel`
-on `link` elements.
+`Array.<string>` — List of lowercase possible link types for `rel` on `link`
+elements.
 
 ## License
 
