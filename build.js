@@ -13,24 +13,21 @@ var proc = unified().use(html)
 
 http.get('http://microformats.org/wiki/existing-rel-values', onconnection)
 
-function onconnection(res) {
-  res.pipe(concat(onconcat)).on('error', bail)
+function onconnection(response) {
+  response.pipe(concat(onconcat)).on('error', bail)
+}
 
-  function onconcat(buf) {
-    var tree = proc.parse(buf)
-    var value = table('formats').concat(table('HTML5_link_type_extensions'))
+function onconcat(buf) {
+  var tree = proc.parse(buf)
+  var value = table('formats').concat(table('HTML5_link_type_extensions'))
 
-    fs.writeFile('index.json', JSON.stringify(value.sort(), 0, 2) + '\n', bail)
+  fs.writeFile('index.json', JSON.stringify(value.sort(), 0, 2) + '\n', bail)
 
-    function table(name) {
-      var node = select.select('[name=' + name + '] ~ table', tree)
-      var rows = select.selectAll('tr', node).slice(1)
+  function table(name) {
+    var node = select.select('[name=' + name + '] ~ table', tree)
+    var rows = select.selectAll('tr', node).slice(1)
 
-      return rows
-        .map(cells)
-        .filter(filter)
-        .map(pick)
-    }
+    return rows.map(cells).filter(filter).map(pick)
   }
 }
 
