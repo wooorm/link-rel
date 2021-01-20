@@ -30,7 +30,8 @@ console.log(linkRel.slice(0, 10))
 Yields:
 
 ```js
-[ 'DCTERMS.conformsTo',
+;[
+  'DCTERMS.conformsTo',
   'DCTERMS.contributor',
   'DCTERMS.creator',
   'DCTERMS.description',
@@ -39,7 +40,8 @@ Yields:
   'DCTERMS.hasVersion',
   'DCTERMS.isFormatOf',
   'DCTERMS.isPartOf',
-  'DCTERMS.isReferencedBy' ]
+  'DCTERMS.isReferencedBy'
+]
 ```
 
 ## API
@@ -55,26 +57,15 @@ elements.
 
 <!-- Definition -->
 
-[build-badge]: https://img.shields.io/travis/wooorm/link-rel.svg
-
-[build]: https://travis-ci.org/wooorm/link-rel
-
+[build-badge]: https://github.com/wooorm/link-rel/workflows/main/badge.svg
+[build]: https://github.com/wooorm/link-rel/actions
 [downloads-badge]: https://img.shields.io/npm/dm/link-rel.svg
-
 [downloads]: https://www.npmjs.com/package/link-rel
-
 [size-badge]: https://img.shields.io/bundlephobia/minzip/link-rel.svg
-
 [size]: https://bundlephobia.com/result?p=link-rel
-
 [npm]: https://docs.npmjs.com/cli/install
-
 [license]: license
-
 [author]: https://wooorm.com
-
 [spec]: https://html.spec.whatwg.org/#linkTypes
-
 [extensions]: http://microformats.org/wiki/existing-rel-values#HTML5_link_type_extensions
-
 [html-link-types]: https://github.com/wooorm/html-link-types
