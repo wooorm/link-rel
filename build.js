@@ -1,3 +1,7 @@
+/**
+ * @typedef {import('hast').Element} Element
+ */
+
 import fs from 'node:fs'
 import https from 'node:https'
 import concat from 'concat-stream'
@@ -6,10 +10,6 @@ import {unified} from 'unified'
 import rehypeParse from 'rehype-parse'
 import {select, selectAll} from 'hast-util-select'
 import {toString} from 'hast-util-to-string'
-
-/**
- * @typedef {import('hast').Element} Element
- */
 
 const proc = unified().use(rehypeParse)
 
@@ -44,6 +44,11 @@ function onconcat(buf) {
    */
   function table(name) {
     const node = select('h2:has(#' + name + ') ~ table', tree)
+
+    if (!node) {
+      throw new Error('Missing node for name `' + name + '`')
+    }
+
     /** @type {Element[]} */
     const rows = selectAll('tr', node).slice(1)
 
