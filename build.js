@@ -1,19 +1,17 @@
-import fs from 'fs'
-import https from 'https'
+import fs from 'node:fs'
+import https from 'node:https'
 import concat from 'concat-stream'
 import {bail} from 'bail'
-import unified from 'unified'
-import html from 'rehype-parse'
-// @ts-ignore remove this when it has types.
-import select from 'hast-util-select'
-// @ts-ignore remove this when it has types.
-import toString from 'hast-util-to-string'
+import {unified} from 'unified'
+import rehypeParse from 'rehype-parse'
+import {select, selectAll} from 'hast-util-select'
+import {toString} from 'hast-util-to-string'
 
 /**
  * @typedef {import('hast').Element} Element
  */
 
-var proc = unified().use(html)
+var proc = unified().use(rehypeParse)
 
 https.get('https://microformats.org/wiki/existing-rel-values', onconnection)
 
@@ -45,15 +43,13 @@ function onconcat(buf) {
    * @param {string} name
    */
   function table(name) {
-    var node = select.select('h2:has(#' + name + ') ~ table', tree)
+    var node = select('h2:has(#' + name + ') ~ table', tree)
     /** @type {Element[]} */
-    var rows = select.selectAll('tr', node).slice(1)
+    var rows = selectAll('tr', node).slice(1)
 
     return rows
       .map((row) =>
-        select
-          .selectAll('td', row)
-          .map((/** @type {Element} */ d) => toString(d))
+        selectAll('td', row).map((/** @type {Element} */ d) => toString(d))
       )
       .filter((cells) => !/not allowed/i.test(cells[1].trim()))
       .map((cells) => cells[0].trim())
