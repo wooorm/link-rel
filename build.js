@@ -11,7 +11,7 @@ import {toString} from 'hast-util-to-string'
  * @typedef {import('hast').Element} Element
  */
 
-var proc = unified().use(rehypeParse)
+const proc = unified().use(rehypeParse)
 
 https.get('https://microformats.org/wiki/existing-rel-values', onconnection)
 
@@ -26,8 +26,8 @@ function onconnection(response) {
  * @param {Buffer} buf
  */
 function onconcat(buf) {
-  var tree = proc.parse(buf)
-  var value = table('formats').concat(table('HTML5_link_type_extensions'))
+  const tree = proc.parse(buf)
+  const value = table('formats').concat(table('HTML5_link_type_extensions'))
 
   if (value.length === 0) {
     bail(new Error('Couldn’t find any rels'))
@@ -35,7 +35,7 @@ function onconcat(buf) {
 
   fs.writeFile(
     'index.js',
-    'export var linkRel = ' + JSON.stringify(value.sort(), null, 2) + '\n',
+    'export const linkRel = ' + JSON.stringify(value.sort(), null, 2) + '\n',
     bail
   )
 
@@ -43,9 +43,9 @@ function onconcat(buf) {
    * @param {string} name
    */
   function table(name) {
-    var node = select('h2:has(#' + name + ') ~ table', tree)
+    const node = select('h2:has(#' + name + ') ~ table', tree)
     /** @type {Element[]} */
-    var rows = selectAll('tr', node).slice(1)
+    const rows = selectAll('tr', node).slice(1)
 
     return rows
       .map((row) =>

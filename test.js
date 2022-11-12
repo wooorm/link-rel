@@ -6,7 +6,7 @@ test('linkRel', function (t) {
   t.ok(Array.isArray(linkRel), 'should be an `array`')
 
   t.doesNotThrow(function () {
-    var index = -1
+    let index = -1
     while (++index < linkRel.length) {
       assert.strictEqual(typeof linkRel[index], 'string', linkRel[index])
     }

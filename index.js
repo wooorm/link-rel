@@ -1,4 +1,4 @@
-export var linkRel = [
+export const linkRel = [
   'DCTERMS.conformsTo',
   'DCTERMS.contributor',
   'DCTERMS.creator',
