@@ -1,3 +1,6 @@
+/**
+ * List of valid values for `rel` on `<link>`
+ */
 export const linkRel = [
   'DCTERMS.conformsTo',
   'DCTERMS.contributor',

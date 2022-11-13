@@ -18,7 +18,9 @@ if (value.length === 0) {
 
 await fs.writeFile(
   'index.js',
-  'export const linkRel = ' + JSON.stringify(value.sort(), null, 2) + '\n'
+  '/**\n * List of valid values for `rel` on `<link>`\n */\nexport const linkRel = ' +
+    JSON.stringify(value.sort(), null, 2) +
+    '\n'
 )
 
 /**
